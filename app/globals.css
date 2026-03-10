@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #c9a84c;
+  --gold-bright: #ffd700;
+  --navy-dark: #05051e;
+  --navy-mid: #0a0a2e;
+  --navy-light: #0d0d3b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--navy-dark);
+  color: white;
+  font-family: 'Cinzel', 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Answer box hover glow animation */
+.answer-box {
+  transition: all 0.2s ease;
+}
+
+.answer-box:hover:not(.bg-green-700):not(.bg-red-700):not(.bg-blue-700):not(.opacity-50) {
+  transform: scale(1.01);
+}
+
+/* Gold text glow */
+.gold-glow {
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.8);
+}
+
+/* Smooth transitions for game state changes */
+.game-transition {
+  transition: all 0.4s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07072a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a6e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c;
+}
